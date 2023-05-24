@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "ic_mnist_backend": {
+      "candid": "src/ic_mnist_backend/ic_mnist_backend.did",
+      "package": "ic_mnist_backend",
+      "type": "rust"
+    },
+    "ic_mnist_frontend": {
+      "dependencies": [
+        "ic_mnist_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ic_mnist_frontend/src/index.html"
+      },
+      "source": [
+        "src/ic_mnist_frontend/assets",
+        "dist/ic_mnist_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
