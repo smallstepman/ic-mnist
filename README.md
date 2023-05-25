@@ -11,7 +11,7 @@ To set up the project, follow these steps:
 1. Installl [IC-SDK](https://github.com/dfinity/sdk/) (building from `master` branch because we need `gzip` feature which is not available in the latest release) 
 ``` bash
 git clone https://github.com/dfinity/sdk.git ./ic-sdk
-cargo build --manifest-path=../ic-sdk/Cargo.toml -p dfx
+cargo build --manifest-path=ic-sdk/Cargo.toml -p dfx
 ```
 2. Clone and deploy this project
 ``` bash
