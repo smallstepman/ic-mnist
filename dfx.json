@@ -3,7 +3,8 @@
     "ic_mnist_backend": {
       "candid": "src/ic_mnist_backend/ic_mnist_backend.did",
       "package": "ic_mnist_backend",
-      "type": "rust"
+      "type": "rust",
+      "gzip": true
     },
     "ic_mnist_frontend": {
       "dependencies": [

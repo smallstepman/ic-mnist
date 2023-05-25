@@ -11,4 +11,8 @@ crate-type = ["cdylib"]
 [dependencies]
 candid = "0.8"
 ic-cdk = "0.7"
-ic-cdk-timers = "0.1" # Feel free to remove this dependency if you don't need timers
+burn = { git  = "https://github.com/burn-rs/burn",  default-features = false }
+burn-ndarray = { git = "https://github.com/burn-rs/burn",  default-features = false }
+serde = "*"
+# wasm-bindgen = "0.2.86"
+getrandom = { version = "*", features = ["custom"] }

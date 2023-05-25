@@ -1,24 +1,88 @@
+<!-- This demo is part of Burn project: https://github.com/burn-rs/burn
+
+    Released under a dual license:
+    https://github.com/burn-rs/burn/blob/main/LICENSE-MIT
+
+    https://github.com/burn-rs/burn/blob/main/LICENSE-APACHE
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>ic_mnist</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <meta charset="utf-8" />
+    <title>Burn MNIST Inference Web Demo</title>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/fabric@5.3.0/dist/fabric.min.js"
+      integrity="sha256-SPjwkVvrUS/H/htIwO6wdd0IA8eQ79/XXNAH+cPuoso="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"
+      integrity="sha256-tgiW1vJqfIKxE0F2uVvsXbgUlTyrhPMY/sm30hh/Sxc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"
+      integrity="sha256-IMCPPZxtLvdt9tam8RJ8ABMzn+Mq3SQiInbDmMYwjDg="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.min.css@8.0.1/normalize.min.css"
+      integrity="sha256-oeib74n7OcB5VoyaI+aGxJKkNEdyxYjd2m3fi/3gKls="
+      crossorigin="anonymous"
+    />
+
+    <style>
+      h1 {
+        padding: 15px;
+      }
+      th,
+      td {
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
+    <h1>Burn MNIST Inference Demo</h1>
+
+    <table>
+      <tr>
+        <th>Draw a digit here</th>
+        <th>Cropped and scaled</th>
+        <th>Probability result</th>
+      </tr>
+      <tr>
+        <td>
+          <canvas id="main-canvas" width="300" height="300" style="border: 1px solid #aaa"></canvas>
+        </td>
+        <td>
+          <canvas
+            id="scaled-canvas"
+            width="28"
+            height="28"
+            style="border: 1px solid #aaa; width: 100px; height: 100px"
+          ></canvas>
+          <canvas id="crop-canvas" width="28" height="28" style="display: none"></canvas>
+        </td>
+        <td>
+          <canvas id="chart" style="border: 1px solid #aaa; width: 600px; height: 300px"></canvas>
+        </td>
+      </tr>
+      <tr>
+        <td><button id="clear">Clear</button></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <div></div>
+
+    <script type="module" src="index.js"></script>
   </body>
 </html>
