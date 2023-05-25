@@ -8,7 +8,7 @@
 
 To set up the project, follow these steps:
 0. Have Rust and Nodejs installed.
-1. Installl [IC-SDK](https://github.com/dfinity/sdk/) (build from `master` branch because we need `gzip` feature which is not available in the latest release) 
+1. Installl [IC-SDK](https://github.com/dfinity/sdk/) (building from `master` branch because we need `gzip` feature which is not available in the latest release) 
 ``` bash
 git clone https://github.com/dfinity/sdk.git ./ic-sdk
 cargo build --manifest-path=../ic-sdk/Cargo.toml -p dfx
